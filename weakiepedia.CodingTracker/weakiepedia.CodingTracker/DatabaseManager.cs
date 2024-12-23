@@ -144,14 +144,14 @@ internal class DatabaseManager
             string tempStartTime = startTime.ToString("HH:mm");
             stopwatch.Start();
             AnsiConsole.MarkupLine("[aquamarine1_1]Stopwatch is running, press any key to stop.[/]");
-            Console.WriteLine("Start Time: " + startTime.ToString("HH:mm"));
+            AnsiConsole.MarkupLine("Start Time: " + startTime.ToString("HH:mm"));
             
             Console.ReadKey();
             
             stopwatch.Stop();
             endTime = DateTime.Now;
             string tempEndTime = startTime.ToString("HH:mm");
-            Console.WriteLine("End Time: " + endTime.ToString("HH:mm"));
+            AnsiConsole.MarkupLine("End Time: " + endTime.ToString("HH:mm"));
             
             DateTime properStartTime = DateTime.ParseExact(tempStartTime, "HH:mm", new CultureInfo("en-US"));
             DateTime properEndTime = DateTime.ParseExact(tempEndTime, "HH:mm", new CultureInfo("en-US"));
